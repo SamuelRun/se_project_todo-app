@@ -45,12 +45,11 @@ const generateTodo = (data) => {
   //   todoDeleteBtn.addEventListener("click", () => {
   //     todoElement.remove();
   //   });
-
-  return todoElement;
 };
 
 addTodoButton.addEventListener("click", () => {
   openModal(addTodoPopup);
+  newTodoValidator.resetValidation();
 });
 
 addTodoCloseBtn.addEventListener("click", () => {
