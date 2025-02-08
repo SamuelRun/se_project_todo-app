@@ -14,7 +14,6 @@ class Todo {
     this._todoDeleteBtn.addEventListener("click", () => {
       this._todoElement.remove();
       this._handelDelete(this._data._completed);
-      this._handleTodo(true);
     });
 
     this._todoCheckboxEl.addEventListener("change", () => {
@@ -52,8 +51,6 @@ class Todo {
       .cloneNode(true);
 
     const todoNameEl = this._todoElement.querySelector(".todo__name");
-    const todoDate = this._todoElement.querySelector(".todo__date");
-    const todoDeleteBtn = this._todoElement.querySelector(".todo__delete-btn");
 
     todoNameEl.textContent = this._data.name;
 
